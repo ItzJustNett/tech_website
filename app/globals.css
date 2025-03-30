@@ -1,0 +1,504 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "OpenDyslexic";
+  src: url("/fonts/OpenDyslexic-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "OpenDyslexic";
+  src: url("/fonts/OpenDyslexic-Bold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+  }
+
+  /* Light Blue Theme */
+  [data-theme="light-blue"] {
+    --background: 210 50% 98%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 210 50% 98%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 210 50% 98%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 210 100% 50%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 210 100% 50%;
+  }
+
+  /* Light Pink Theme */
+  [data-theme="light-pink"] {
+    --background: 350 100% 98%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 350 100% 98%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 350 100% 98%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 350 100% 60%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 350 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 350 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 350 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 350 31.8% 91.4%;
+    --input: 350 31.8% 91.4%;
+    --ring: 350 100% 60%;
+  }
+
+  /* Light Green Theme */
+  [data-theme="light-green"] {
+    --background: 120 50% 98%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 120 50% 98%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 120 50% 98%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 142 70% 45%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 120 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 120 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 120 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 120 31.8% 91.4%;
+    --input: 120 31.8% 91.4%;
+    --ring: 142 70% 45%;
+  }
+
+  /* Light Violet Theme */
+  [data-theme="light-violet"] {
+    --background: 270 50% 98%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 270 50% 98%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 270 50% 98%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 270 70% 60%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 270 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 270 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 270 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 270 31.8% 91.4%;
+    --input: 270 31.8% 91.4%;
+    --ring: 270 70% 60%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Test content styles */
+.test-container {
+  @apply space-y-6;
+}
+
+.test-header {
+  @apply mb-4;
+}
+
+.test-questions {
+  @apply space-y-8;
+}
+
+.test-question {
+  @apply space-y-2 border-b pb-6;
+}
+
+.test-options {
+  @apply space-y-2 mt-2;
+}
+
+.test-option {
+  @apply flex items-center space-x-2;
+}
+
+.test-actions {
+  @apply mt-6 flex justify-end;
+}
+
+.submit-test {
+  @apply px-4 py-2 bg-primary text-primary-foreground rounded-md hover:bg-primary/90;
+}
+
+.test-results {
+  @apply border p-4 rounded-md mb-6 bg-secondary/50;
+}
+
+.test-results .score {
+  @apply text-xl font-bold;
+}
+
+.test-results .feedback {
+  @apply text-sm mt-2;
+}
+
+.test-rewards {
+  @apply mt-4 p-3 bg-primary/10 rounded-md;
+}
+
+/* Accessibility styles */
+.high-contrast {
+  --background: 0 0% 100%;
+  --foreground: 0 0% 0%;
+  --card: 0 0% 100%;
+  --card-foreground: 0 0% 0%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 0 0% 0%;
+  --primary: 0 0% 0%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 0 0% 90%;
+  --secondary-foreground: 0 0% 0%;
+  --muted: 0 0% 90%;
+  --muted-foreground: 0 0% 30%;
+  --accent: 0 0% 90%;
+  --accent-foreground: 0 0% 0%;
+  --border: 0 0% 0%;
+  --input: 0 0% 0%;
+  --ring: 0 0% 0%;
+}
+
+.dark.high-contrast {
+  --background: 0 0% 0%;
+  --foreground: 0 0% 100%;
+  --card: 0 0% 0%;
+  --card-foreground: 0 0% 100%;
+  --popover: 0 0% 0%;
+  --popover-foreground: 0 0% 100%;
+  --primary: 0 0% 100%;
+  --primary-foreground: 0 0% 0%;
+  --secondary: 0 0% 20%;
+  --secondary-foreground: 0 0% 100%;
+  --muted: 0 0% 20%;
+  --muted-foreground: 0 0% 70%;
+  --accent: 0 0% 20%;
+  --accent-foreground: 0 0% 100%;
+  --border: 0 0% 100%;
+  --input: 0 0% 100%;
+  --ring: 0 0% 100%;
+}
+
+.dyslexic-font {
+  font-family: "OpenDyslexic", sans-serif;
+  letter-spacing: 0.05em;
+  word-spacing: 0.1em;
+  line-height: 1.5;
+}
+
+.reduced-motion * {
+  transition-duration: 0.001ms !important;
+  animation-duration: 0.001ms !important;
+  animation-iteration-count: 1 !important;
+}
+
+/* Add a utility class for screen readers */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Add a utility class for read-aloud highlight */
+.read-aloud-highlight {
+  background-color: rgba(255, 255, 0, 0.3);
+}
+
+/* Markdown content styles */
+.prose {
+  @apply text-foreground;
+}
+
+.prose h1 {
+  @apply text-2xl font-bold mt-6 mb-4;
+}
+
+.prose h2 {
+  @apply text-xl font-bold mt-5 mb-3;
+}
+
+.prose h3 {
+  @apply text-lg font-bold mt-4 mb-2;
+}
+
+.prose p {
+  @apply my-3;
+}
+
+.prose ul {
+  @apply list-disc pl-5 my-3;
+}
+
+.prose ol {
+  @apply list-decimal pl-5 my-3;
+}
+
+.prose li {
+  @apply my-1;
+}
+
+.prose blockquote {
+  @apply border-l-4 border-gray-300 dark:border-gray-700 pl-4 italic my-3;
+}
+
+.prose code {
+  @apply bg-gray-100 dark:bg-gray-800 px-1 py-0.5 rounded text-sm;
+}
+
+.prose pre {
+  @apply bg-gray-100 dark:bg-gray-800 p-3 rounded my-3 overflow-x-auto;
+}
+
+.prose a {
+  @apply text-primary hover:underline;
+}
+
+.prose table {
+  @apply w-full border-collapse my-3;
+}
+
+.prose th,
+.prose td {
+  @apply border border-gray-300 dark:border-gray-700 p-2;
+}
+
+.prose th {
+  @apply bg-gray-100 dark:bg-gray-800;
+}
+
+/* Ensure read-aloud highlight works with markdown */
+.read-aloud-highlight .prose * {
+  @apply bg-yellow-100 dark:bg-yellow-900/30;
+}
+
+/* Privacy Policy styles */
+.prose h1 {
+  @apply text-3xl font-bold mt-8 mb-4;
+}
+
+.prose h2 {
+  @apply text-2xl font-bold mt-8 mb-4;
+}
+
+.prose h3 {
+  @apply text-xl font-bold mt-6 mb-3;
+}
+
+.prose p {
+  @apply my-4;
+}
+
+.prose ul {
+  @apply list-disc pl-6 my-4;
+}
+
+.prose li {
+  @apply my-2;
+}
+
+.prose a {
+  @apply text-primary hover:underline;
+}
+
+.prose em {
+  @apply italic;
+}
+
+.prose strong {
+  @apply font-bold;
+}
+
+/* Store styles */
+.store-grid {
+  @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4;
+}
+
+.store-item {
+  @apply border rounded-lg overflow-hidden transition-all hover:shadow-md;
+}
+
+.store-item-image {
+  @apply w-full h-40 object-contain bg-gray-50 dark:bg-gray-800 p-4 relative overflow-hidden;
+}
+
+.store-item-content {
+  @apply p-4;
+}
+
+.store-item-title {
+  @apply font-medium text-lg mb-1;
+}
+
+.store-item-description {
+  @apply text-sm text-muted-foreground mb-3;
+}
+
+.store-item-price {
+  @apply flex items-center justify-between;
+}
+
+.store-item-cost {
+  @apply font-bold text-amber-500 dark:text-amber-400;
+}
+
+.item-badge {
+  @apply absolute top-2 right-2 bg-primary text-primary-foreground text-xs px-2 py-1 rounded-full z-10;
+}
+
+.item-type-hat {
+  @apply bg-blue-500 text-white;
+}
+
+.item-type-glasses {
+  @apply bg-purple-500 text-white;
+}
+
+.item-type-collar {
+  @apply bg-green-500 text-white;
+}
+
+.item-type-background {
+  @apply bg-amber-500 text-white;
+}
+
+/* Add animation for store items */
+.store-item:hover {
+  @apply transform transition-transform duration-200 scale-[1.02];
+}
+
+.store-item:hover .store-item-image > div {
+  @apply animate-pulse;
+}
+
